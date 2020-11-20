@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        {{#each players}}
+        <div class="player">
+            <div class ="playerName">{{firstName}} {{lastName}}</div>
+            <div class ="jerseyClass">{{jersey}}</div>
+            <img class = "imageClass" src ="{{imgSrc}}" onerror ="imageError(this)">
+            <div class="positionClass">{{postion}}</div>
+        </div>
+        {{/each}}
+      </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="headContainer">
+            <input type="text" id="inpuut" placeholder="pick a team">
+            <button class="btn"> GET Roster </button>
+        </div>
+        <div id="playerContainer">
+
+
+            
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"
+        integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw=="
+        crossorigin="anonymous"></script>
+    <script src="View.js"></script>
+    <script src="Model.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
